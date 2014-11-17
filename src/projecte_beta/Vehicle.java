@@ -1,22 +1,21 @@
 
-package projecte_beta;
-
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  *
  * @author eric
+ * @Date 20141117
  */
+
+package projecte_beta;
+
+
+
 public abstract class Vehicle {
     
    int data;
    private String marca;
    private String model;
-   private String matricula;
    private static int numeroVehicles;
-   
+   private float consum;
 
      
     public Vehicle(){
@@ -25,11 +24,11 @@ public abstract class Vehicle {
     }
  
     
-    public Vehicle(String fabricant, String mod,String matricula,int data) {
+    public Vehicle(String fabricant, String mod,int data, float consum) {
         this.marca = fabricant;
 	this.model = mod;
-        this.data = data;
-        this.matricula = matricula;
+        this.data = data;        
+        this.consum = consum;
                
         numeroVehicles++;
         
@@ -43,15 +42,7 @@ public abstract class Vehicle {
         this.data = data;
     }
 
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-    
-   
+     
      
     public String getMarca() {
         return marca;
@@ -69,6 +60,15 @@ public abstract class Vehicle {
         this.model = model;
     }
 
+    public float getConsum() {
+        return consum;
+    }
+
+    public void setConsum(int consum) {
+        this.consum = consum;
+    }
+    
+
     
     public static int getNumeroVehicles() {
 
@@ -80,5 +80,4 @@ public abstract class Vehicle {
             super.finalize();
         }
     
-   
-}
+   }

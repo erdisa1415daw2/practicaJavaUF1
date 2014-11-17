@@ -1,25 +1,28 @@
 
+/**
+ *
+ * @author eric
+ * @Date 20141117
+ */
+
 package projecte_beta;
 
 
-import java.util.Calendar;
-import java.util.Date;
-
- 
-public class Cotxe extends Vehicle {
+ public class Cotxe extends Vehicle {
  
 	  int numPlaçes;
+          String Extres;
           
 	
         private static int nombreCotxes;
         
         
-	public Cotxe(String fabricant, String mod,String matricula,int data,int places) {
+	public Cotxe(String fabricant, String mod, String extres,int data,int places,float consum) {
             
-        super(fabricant,mod,matricula,data);
+        super(fabricant,mod,data,consum);
     		
       		this.numPlaçes = places;
-                
+                this.Extres = extres;
                 nombreCotxes++;
 	}
         
@@ -28,7 +31,15 @@ public class Cotxe extends Vehicle {
         nombreCotxes++;
     }
 
-   
+    public String getExtres() {
+        return Extres;
+    }
+
+    public void setExtres(String Extres) {
+        this.Extres = Extres;
+    }
+
+      
       
     public int getNumPlaçes() {
         return numPlaçes;
