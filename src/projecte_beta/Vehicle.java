@@ -17,7 +17,7 @@ public abstract class Vehicle {
      *
      * @param fabricant, nom del fabricant/marca
      * @param mod, model de cotxe
-     * @param data, data del vehicle
+     * @param data, any de la compra del vehicle
      * @param consum, consum vehicle als 100 km  
     *
      */
@@ -80,11 +80,6 @@ public abstract class Vehicle {
     public static int getNumeroVehicles() {
 
         return numeroVehicles;
-    }
-
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
     }
 
 }
