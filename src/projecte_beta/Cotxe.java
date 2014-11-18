@@ -11,6 +11,17 @@ public class Cotxe extends Vehicle {
 
     private static int nombreCotxes;
 
+    
+     /**
+      * Constructor amb 6 paràmetres 
+      * @param fabricant, nom del fabricant/marca
+      * @param mod, model de cotxe
+      * @param extres, Cuantitat de extres del vehicle
+      * @param data, any de la compra del vehicle
+      * @param places, número de places del vehicle
+      * @param consum, del cotxe als 100km
+      */
+   
     public Cotxe(String fabricant, String mod, String extres, int data, int places, float consum) {
 
         super(fabricant, mod, data, consum);
